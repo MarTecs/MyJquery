@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title></title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h3>例子</h3>
+	<p title="选择你最喜欢的水果：" id="va">你最喜欢的水果是：</p>
+	<ul>
+		<li>苹果</li>
+		<li>句子</li>
+		<li>3</li>
+	</ul>
+</body>
+	<script type="text/javascript">
+		//将jQuery对象转换为DOM对象
+		var dom1 = $("#va").get(0);
+		var dom2 = $("#va")[0];
+		alert(dom1.innerHTML);
+		alert(dom2.innerHTML);
+		
+		//将DOM对象转换为jQuery对象
+		var dom3 = document.getElementById("va");
+		var s = $(dom3);
+		alert($(s).html())
+	</script>
+</html>
