@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<input type="checkbox" id="cr"/><label for="cr">我已经阅读了上面的制度！</label>
+	<input type="submit" value="登录" id="login"/>
+</body>
+	<script>
+		$(document).ready(function(){
+			var $cr = $("#cr");
+			var cr = $cr[0];
+			$cr.click(function(){
+				if($cr.prop("checked")){
+					alert("感谢你的支持！你可以继续操作！");
+				}
+			});
+		});
+	</script>
+</html>
