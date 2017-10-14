@@ -64,7 +64,7 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		
+		/*
 		$(document).ready(function() {
 			$(".has_children").click(function(){
 				$(this).addClass("highlight");
@@ -73,16 +73,28 @@
 			});
 			alert($(this).siblings());
 		});
-		
+		*/
 		/*
 		 * 
-		 *书上做法
+		 *书上做法一
+		 * 
 		$(function(){
 			$(".has_children").click(function(){
 				$(this).addClass("highlight").children("a").show().end().siblings().removeClass("highlight").children("a").hide();
 			});
 		});
-		/
+		*/
+		
+		
+		$(function(){
+			$(".has_children").click(function(){
+				$(this).addClass("highlight")
+				.children("a").show().end()
+				.siblings().removeClass("highlight")
+				.children("a").hide();
+			});
+		});
+		
 		/*
 		$(function(){
 			$(".has_children").click(function(){
