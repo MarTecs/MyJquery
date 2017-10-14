@@ -22,19 +22,16 @@
 				color: #fff;
 				background: green;
 			}
-			
 			div {
 				padding: 0;
 				margin: 10px 0;
 			}
-			
 			div a {
 				background: #888;
 				display: none;
 				float: left;
 				width: 300px;
 			}
-			
 		</style>
 	</head>
 	<body>
@@ -67,20 +64,30 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		/*
+		
 		$(document).ready(function() {
 			$(".has_children").click(function(){
-				
 				$(this).addClass("highlight");
-				$(this).find("a").toggle();
+				$(this).children("a").toggle();
+				$(this).siblings().removeClass("highlight");
+			});
+			alert($(this).siblings());
+		});
+		
+		/*
+		 * 
+		 *书上做法
+		$(function(){
+			$(".has_children").click(function(){
+				$(this).addClass("highlight").children("a").show().end().siblings().removeClass("highlight").children("a").hide();
 			});
 		});
-		*/
-		
+		/
+		/*
 		$(function(){
 			$(".has_children").click(function(){
 				
 			});
-		});
+		});*/
 	</script>
 </html>
