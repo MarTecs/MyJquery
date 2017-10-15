@@ -13,43 +13,16 @@
 		<script src="js/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
-		<input type="checkbox" value="1" name="check" />
-		<input type="checkbox" name="check"  value="2" />
-		<input type="checkbox" name="check"  value="3" />
-		<button type="button" id="btn">你选中的个数</button>
+		<input type="checkbox" value="1" name="check" checked/>
+		<input type="checkbox" value="2" name="check"/>
+		<input type="checkbox" name="check"  value="3" checked/>
+		<input type="button" value="你选中的个数" id="btn" />
 	</body>
 	<script type="text/javascript">
-		/*
-		 * 使用jQuery进行操作
 		$(function(){
 			$("#btn").click(function(){
-				alert("您选中了" + $("input:checkbox:checked").length + "个");
+				alert($(":checkbox:checked").eq(2).val());
 			});
 		});
-		*/
-		
-		/*原生jQuery进行操作
-		var btn = document.getElementById("btn");
-		btn.onclick = function(){
-			var a = 0;
-			var check = document.getElementsByTagName("input");
-			for ( var i = 0; i < check.length; i++ ) {
-				if(check[i].checked) {
-					a++;
-				}
-			}
-			alert("您选中了" + a + "个");
-		};
-		*/
-		
-		/*
-		 * 书上例子
-		 */
-		var btn = document.getElementById("btn");
-		btn.onclick = function() {
-			var arrays = new Array();
-			var items = document.getElementsByName("check");
-			for( i = 0)
-		};
 	</script>
 </html>
