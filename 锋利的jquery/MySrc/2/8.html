@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-15
+    	描述：实现过滤性选择器
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			div, span, p {
+				width: 140px;
+				height: 140px;
+				margin: 5px;
+				background: #aaa;
+				border: #000 1px solid;
+				float: left;
+				font-size: 17px;
+				font-family: verdana;
+			}
+			
+			div.mini {
+				width: 55px;
+				height: 55px;
+				background-color: #aaa;
+				font-size: 12px;
+			}
+			
+			div.hide {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>爱你</h1>
+		<div class="one" id="one">
+			id为one, class为One的div
+		</div>
+		<div class="one" id="two" title="test">
+			id为two, class为One, title为test的div
+			<div class="mini" title="other">class为mini,title为other</div>
+			<div class="mini" title="test">class为mini,title为test</div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini"></div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini" title="tesst">class为mini,title为tesst</div>
+		</div>
+		<div class="none" style="display: none;">style的display为none的div</div>
+		<div class="hide">class为hide</div>
+		<div>包含input的type为"hidden"的div <input type="hidden" size="8" /></div>
+		<span id="mover">正在执行动画的span元素</span>
+	</body>
+	<script>
+		$(function(){
+			//改变第1个div元素的背景颜色
+			//$("div:first").css("background-color", "#bbffaa");
+			
+			//改变最后一个div背景的颜色
+			//$("div:last").css("background-color", "red");
+			
+			//改变class不为one的div元素的背景颜色
+			//$("div:not(.one)").css("background-color","aqua");
+			
+			//改变索引值为偶数的div元素的背景颜色
+			//$("div:even").css("background-color","yellow");
+			
+			//改变索引值为3的div元素的背景色
+			//$("div:eq(3)").css("background-color", "ghostwhite");
+			//$("div").eq(3).css("background-color","red");
+			
+			
+			//改变索引值大于3的div元素的背景颜色
+			//$("div:gt(3)").css("background-color","#FF0000");
+			
+			//改变索引值小于3的div元素背景颜色
+			//$("div:lt(3)").css("background-color", "#FF0000");
+			
+			
+			//改变所有标题元素
+			//$(":header").css("background-color", "#E5E5E5");
+			
+			//改变当前正在执行动画的元素背景颜色
+			$(":animated").css("background","#bbffaa");
+		});
+	</script>
+</html>
