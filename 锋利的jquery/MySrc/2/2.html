@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-15
+    	描述：jQuery选择器测试
+    -->
 	<head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +13,17 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
-		<div id="tt">test</div>
-		
-		
+		<p>测试1</p>
+		<p>测试2</p>
+		<p>测试3</p>
 	</body>
-	<script type="text/javascript">
+	<script>
+		/*
 		$(function(){
-			$("#tt").click(function(){
-				$("#tt").val("2");
-				alert("2");
+			$("p").click(function(){
+				alert($(this).html());
 			});
 		});
+		*/
 	</script>
 </html>
