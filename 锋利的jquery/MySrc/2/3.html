@@ -27,10 +27,25 @@
 		<button type="button" id="change">变色</button>
 	</body>
 	<script type="text/javascript">
+		/*
+		 原始JS代码如下
+		 
+		document.getElementById("change").onclick = function(){
+			var td = document.getElementsByTagName("tr");
+			for ( var i = 0; i < td.length; i++ ){
+				if(i % 2 == 0) {
+					td[i].style.color = "red";
+				}
+			}
+		};
+		* */
+		/*
+		 * jQuery代码如下
 		$(function(){
 			$("#change").click(function(){
-				alert($("tr:even").length);
+				$("tr:even").css("color","red");
 			});
 		});
+		*/
 	</script>
 </html>
