@@ -19,14 +19,48 @@
 		<input type="button" value="你选中的个数" id="btn" />
 	</body>
 	<script type="text/javascript">
+		
+		/*
+		 * 
+		 * 使用jQuery进行获取
 		$(function(){
 			$("#btn").click(function(){
 				alert($(":checkbox:checked").length);
 			});
+		
+		*/
+		
+		
+		//自己使用JS原生进行写
+		/*
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var count = 0;
+			var check = document.getElementsByTagName("input");
+			for ( var i = 0; i < check.length; i++ ){
+				if ( check[i].checked ) {
+					count++;
+				}
+			}
+			alert("一共选择了" + count + "个");
+		};
+		
+		*/
+		
+		//书上写法
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var arrays = new Array();
+			var items = document.getElementsByName("check");
 			
-			function(){
-				var a = function(){
-				
+			for( i = 0; i < items.length; i++ ) {
+				if( items[i].checked ) {
+					arrays.push(items[i].value);
+				}
+			}
+			
+			alert("您一共选择了 " + arrays.length );
+		};
 		
 	</script>
 </html>
