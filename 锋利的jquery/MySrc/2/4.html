@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-15
+    	描述：对多选框进行操作，输出选中的多选框个数
+    -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>对多选框进行操作</title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<input type="checkbox" value="1" name="check" />
+		<input type="checkbox" name="check"  value="2" />
+		<input type="checkbox" name="check"  value="3" />
+		<button type="button" id="btn">你选中的个数</button>
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 使用jQuery进行操作
+		$(function(){
+			$("#btn").click(function(){
+				alert("您选中了" + $("input:checkbox:checked").length + "个");
+			});
+		});
+		*/
+		
+		/*原生jQuery进行操作
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var a = 0;
+			var check = document.getElementsByTagName("input");
+			for ( var i = 0; i < check.length; i++ ) {
+				if(check[i].checked) {
+					a++;
+				}
+			}
+			alert("您选中了" + a + "个");
+		};
+		*/
+		
+		/*
+		 * 书上例子
+		 */
+		var btn = document.getElementById("btn");
+		btn.onclick = function() {
+			var arrays = new Array();
+			var items = document.getElementsByName("check");
+			for( i = 0)
+		};
+	</script>
+</html>
