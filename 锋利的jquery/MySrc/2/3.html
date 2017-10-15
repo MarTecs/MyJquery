@@ -24,11 +24,13 @@
 				<tr><td>第5行</td><td>第5行</td></tr>
 			</tbody>
 		</table>
-		<button type="button">变色</button>
+		<button type="button" id="change">变色</button>
 	</body>
 	<script type="text/javascript">
 		$(function(){
-			
+			$("#change").click(function(){
+				alert($("tr:even").length);
+			});
 		});
 	</script>
 </html>
