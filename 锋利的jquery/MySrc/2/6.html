@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-15
+    	描述：jQuery选择器代码测试
+    -->
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title></title>
 		<script src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			div, span, p {
+				width: 140px;
+				height: 140px;
+				margin: 5px;
+				background: #aaa;
+				border: #000 1px solid;
+				float: left;
+				font-size: 17px;
+				font-family: verdana;
+			}
+			
+			div.mini {
+				width: 55px;
+				height: 55px;
+				background-color: #aaa;
+				font-size: 12px;
+			}
+			
+			div.hide {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
-		<div>
-			<p><span id="">d</span></p>
+		<div class="one" id="one">
+			id为one, class为One的div
 		</div>
-		
+		<div class="one" id="two" title="test">
+			id为two, class为One, title为test的div
+			<div class="mini" title="other">class为mini,title为other</div>
+			<div class="mini" title="test">class为mini,title为test</div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini"></div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini" title="tesst">class为mini,title为tesst</div>
+		</div>
+		<div class="none" style="display: none;">style的display为none的div</div>
+		<div class="hide">class为hide</div>
+		<div>包含input的type为"hidden"的div <input type="hidden" size="8" /></div>
+		<span id="mover">正在执行动画的span元素</span>
 	</body>
 	<script type="text/javascript">
-		$(function(){
-			alert($("div > span").html());
-		});
+			//alert($("div > span").html());
+			//alert($(".one + div").html());
+			//alert($("div~div").eq(2).html());
+			
+			//改变body内所有div的背景颜色
+			//$("body div").css("background-color", "#bbffaa");
+			
+			//改变body内子div元素的背景颜色
+			//$("body > div").css("background-color", "#bbffaa");
+			
+			//改变class为one的下一个div背景颜色
+			//$(".one+div").css("background-color", "#bbffaa");
+			
+			//改变id为two的元素后面的所有div兄弟元素的背景颜色
+			//$("#two~div").css("background-color", "#bbffaa");
 	</script>
 </html>
