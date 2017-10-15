@@ -4,16 +4,17 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
+	<title>测试使用jQuery</title>
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<style type="text/css">
-		.demo {
-			font-size: 30px;
-			color: red;
-		}
-	</style>
 </head>
 <body>
-	<p class="demo">CSS Demo</p>
+	<p class="demo">jQuery Demo</p>
 </body>
+<script>
+	$(function(){
+		$(".demo").click(function(){
+			alert("jQuery Demo");
+		});
+	});
+</script>
 </html>
