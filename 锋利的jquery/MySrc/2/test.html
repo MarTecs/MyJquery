@@ -10,7 +10,11 @@
 			<h1>
 				<p>这是一个短短</p>
 			</h1>
-			<span id="1"></span>
+			<span id="1">
+				<span id="">
+					
+				</span>
+			</span>
 			<span id="2"></span>
 		</div>
 	</body>
@@ -22,7 +26,10 @@
 			$("div:contains(这)").css("font-style", "oblique");
 			
 			//改变
-			alert($("div>span:empty").prop("id"));
+			//alert($("div>span:empty").length);
+			
+			//选取div下的span元素，要求span元素包括子元素或者自己有文本内容
+			//alert($("div > span:parent").length);
 		});
 	</script>
 </html>
