@@ -71,7 +71,17 @@
 			
 			
 			//改变属性title值不等于test的div元素的背景色
-			$("div[title != test]").css("background-color", "red");
+			//$("div[title != test]").css("background-color", "red");
+			
+			
+			//改变属性title值以est结束的div元素的背景颜色
+			//$("div[title$=est]").css("background-color", "red");
+			
+			//改变属性值title含有es的div元素的背景颜色
+			//$("div[title*=es]").css("background-color", "red");
+			
+			//改变含有属性id，并且属性title值含有es的div元素的背景颜色
+			$("div[id][title*=est]").css("background-color", "red");
 		});
 	</script>
 </html>
