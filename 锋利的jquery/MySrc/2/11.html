@@ -3,14 +3,12 @@
 	<!--
     	作者：sivan.tech@sivan0222.cn
     	时间：2017-10-16
-    	描述：可见性过滤选择器
-    	注意事项：可见性选择器中：需要注意的是： :hidden 不仅包括样式属性 display 为 none的元素。也包括文本隐藏域，
-    			和visbility: hidden之类的元素
+    	描述：属性过滤选择器
     -->
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
 		<style type="text/css">
 			div, span, p {
 				width: 140px;
@@ -65,12 +63,6 @@
 	<script type="text/javascript">
 		$(function(){
 			
-			
-			//改变所有可见的div元素的背景颜色
-			$("div:visible").css("background-color", "red");
-			
-			//显示隐藏的div元素,后面3000是3000毫秒，有一个显示的效果，3秒完成
-			$("div:hidden").show(3000);
 		});
 	</script>
 </html>
