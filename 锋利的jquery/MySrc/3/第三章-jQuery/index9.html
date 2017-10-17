@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：包裹节点
+    	注意事项：wrap()方法只是将一个单独的节点进行包裹
+    			 wrapAll()方法是将所有匹配的元素用一个元素来进行包裹，包裹之后，将会放到一起，也就是会改变原来的顺序
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title>包裹节点</title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p>采用列表的形式进行包裹</p>
+		
+		<ul>
+			<li>1</li>
+		</ul>
+		
+		<p>另一个段落</p>
+		<button id="wrap">包裹</button>
+	</body>
+	<script>
+		$(function(){
+			//包裹节点：用来将某个节点用其他标记包裹起来,采用wrap()方法
+			/*
+			$("#wrap").click(function(){
+				$("p").wrap("<h3></h3"); //用h3将p元素包裹起来
+			})
+			*/
+			
+			
+			//将所有匹配到的元素用一个元素来进行包裹
+			$("#wrap").click(function(){
+				//给所有匹配到的元素用一个元素进行包裹,包裹之后，将会放到一起，也就是会改变原来的顺序
+				$("p").wrapAll("<h3>sivan</h3>");
+			});
+		});
+	</script>
+</html>
