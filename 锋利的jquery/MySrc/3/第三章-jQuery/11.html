@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：样式操作
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			.high {
+				font-weight: bold;
+				color: red;
+			}
+			
+			.another {
+				font-style: italic;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="button" value="输出class类" />
+		<input type="button" value="设置class类" />
+		<input type="button" value="追加class类" />
+		<input type="button" value="删除全部class类" />
+		<input type="button" value="删除指定class类" />
+		<input type="button" value="重复切换class类" />
+		<p>你最喜欢的水果是？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body>
+	<script>
+		$(function(){
+			//样式操作
+			
+			
+			$("input:eq(0)").click(function(){
+				//输出class类
+				alert($("p").attr("class"));
+			});
+			
+			$("input:eq(1)").click(function(){
+				//设置class类
+				$("p").attr("class","high");
+				alert($("p").attr("class"));
+			});
+			
+			$("input:eq(2)").click(function(){
+				//追加class类
+				$("p").addClass("another");
+				alert($("p").attr("class"));
+			});
+			
+			$("input:eq(3)").click(function(){
+				//删除全部class类
+				$("p").removeClass();
+				alert($("p").attr("class"));
+			});
+			
+			$("input:eq(4)").click(function(){
+				//删除指定class类
+				$("p").removeClass("high");
+				alert($("p").attr("class"));
+			});
+			
+			$("input:eq(5)").click(function(){
+				//重复切换class类,如果类名存在则删除它，如果不存在则添加它
+				$("p").toggleClass(function(){
+					alert($("p").attr("class"));
+				},function(){
+					alert($("p").attr("class"));
+				});
+			});
+			
+			
+			
+			
+			
+		});
+	</script>
+</html>
