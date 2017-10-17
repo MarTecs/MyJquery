@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：测试 切换样式
+    -->
+	<head>
+		
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			ul {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>加</h1>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<div>
+			<h1>加</h1>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<div>
+			<h1>加</h1>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$("h1").click(function(){
+				$(this).next().toggle(function(){
+					alert("显示");
+				},function(){
+					alert("隐藏");
+				});
+			});
+		});
+	</script>
+</html>
