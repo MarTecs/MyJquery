@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：判断是否含有某个样式
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p class="togg" title="选择你最喜欢的水果：">你最喜欢的水果是？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body>
+	<script>
+		$(function(){
+			alert($("p").hasClass("togg"));			//判断的时候其实调用了 $("p").is(".togg");
+			alert($("p").is(".togg"));
+		});
+	</script>
+</html>
