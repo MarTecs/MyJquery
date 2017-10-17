@@ -3,7 +3,8 @@
 	<!--
     	作者：sivan.tech@sivan0222.cn
     	时间：2017-10-17
-    	描述：复制节点
+    	描述：替换节点
+    	注意：替换原来有事件的节点之后，新节点没有事件，需要自己手动加上一个事件
     -->
 	<head>
 		<meta charset="UTF-8">
@@ -17,12 +18,20 @@
 			<li title="橘子">橘子</li>
 			<li title="菠萝">菠萝</li>
 		</ul>
+		<button id="replace">替换</button>
 	</body>
 	<script type="text/javascript">
-		$(function(){(
-			//没有替换的.replaceWith(要替换的)
-				$("ul").replaceWith("<p>这是一个简单的段落</p>");
+		$(function(){
 			
+			
+			$("#replace").click(function(){
+				
+				//替换方式1：已经存在的.replaceWith("不存在的");
+				//$("ul").replaceWith("<em>兄弟不存在的</em>");
+				
+				//替换方式2：替换的内容.replaceAll("要替换的");
+				$("<em>替换的内容</em>").replaceAll($("ul"));
+			});
 		});
 	</script>
 </html>
