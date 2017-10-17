@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：删除节点
+    -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果：">你最喜欢的水果是？</p>
+	<ul>
+		<li title="苹果">苹果</li>
+		<li title="橘子">橘子</li>
+		<li title="菠萝">菠萝</li>
+	</ul>
+	<button id="remove">删除节点</button>
+</body>
+<script type="text/javascript">
+	$(function(){
+		//1. remove方法（找到匹配的元素之后进行移除，将会返回一个节点）
+		
+		$("#remove").click(function(){
+			//点击删除按钮
+			var a = $("ul > li:eq(0)").remove();	//该方法将会返回一个移除之后的一个节点
+			a.appendTo("ul");
+		});
+		
+		//2. 
+	});
+</script>
+</html>
