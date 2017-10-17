@@ -22,11 +22,17 @@
 	<script type="text/javascript">
 		$(function(){
 			//复制节点
+			/*
 			$("ul li").click(function(){
 				$(this).clone().appendTo($("ul"));
 			})
-			
+			*/
 			//复制之后的节点并不具有任何行为，如果需要有行为，则可以按照如下代码所示
+			$("ul li").click(function(){
+				$(this).clone(true).appendTo($("ul"));
+			})
+			
+			
 		});
 	</script>
 </html>
