@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+      <!--
+      	作者：sivan.tech@sivan0222.cn
+      	时间：2017-10-17
+      	描述：复制节点
+      	注意事项：复制过后的新节点并不具有任何行为
+      -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果：">你最喜欢的水果是？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//复制节点
+			$("ul li").click(function(){
+				$(this).clone().appendTo($("ul"));
+			})
+			
+			//复制之后的节点并不具有任何行为，如果需要有行为，则可以按照如下代码所示
+		});
+	</script>
+</html>
