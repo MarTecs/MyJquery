@@ -18,20 +18,29 @@
 		<li title="苹果">苹果</li>
 		<li title="橘子">橘子</li>
 		<li title="菠萝">菠萝</li>
+		<p>
+			dada
+			<p>ss</p>
+		</p>
 	</ul>
 	<button id="remove">删除节点</button>
 </body>
 <script type="text/javascript">
 	$(function(){
 		//1. remove方法（找到匹配的元素之后进行移除，将会返回一个节点）
-		
+		/*
 		$("#remove").click(function(){
 			//点击删除按钮
 			var a = $("ul > li:eq(0)").remove();	//该方法将会返回一个移除之后的一个节点
 			a.appendTo("ul");
 		});
-		
-		//2. 
+		*/
+		//2. empty()方法：用来清空节点
+		$("#remove").click(function(){
+			//使用empty方法清空节点
+			$("ul").empty();		//该方法将会删除匹配节点的所有子节点和内容
+			//$("li").empty();		//将会清空节点的所有内容，并不会移除节点
+		});
 	});
 </script>
 </html>
