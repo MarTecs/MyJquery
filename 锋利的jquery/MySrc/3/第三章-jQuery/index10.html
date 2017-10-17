@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-17
+    	描述：属性操作
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果：">你最喜欢的水果是？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+		
+		<button id="get">获取对应的属性</button>
+		<button id="delete">删除对应的属性</button>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//获取属性
+			$("#get").click(function(){
+				
+				//获取属性
+				alert($("p").attr("name"));
+				
+				//设置多个属性的值
+				$("p").attr({
+					"title": "jQuery",
+					"name": "none"
+				});
+				
+				
+				alert($("p").attr("name"));
+			});
+		});
+		
+		
+		//删除对应的属性
+		$("#delete").click(function(){
+			alert($("p").attr("title"));
+			$("p").removeAttr("title");
+			alert($("p").attr("title"));
+		});
+	</script>
+</html>
