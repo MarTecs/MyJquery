@@ -16,9 +16,24 @@
 		<p>段落3：</p>
 	</body>
 	<script type="text/javascript">
-		//插入节点
+		//父加子：append();	向所有已匹配节点插入同一个内容，插入在原有内容后面
+		/*
 		$(function(){
-			$("p").append("<li>向所有选中的p元素添加一个标签</li>")
+			$("p").append("<li>向所有选中的p元素添加一个标签</li>");
+		});
+		*/
+		
+		//子加父：appendTo()
+		/*
+		$(function(){
+			//动态创建节点
+			$("<li>123</li>").appendTo("p");
+		});
+		*/
+		
+		//使用prepend()向元素前面加东西
+		$(function(){
+			//使用
 		});
 	</script>
 </html>
