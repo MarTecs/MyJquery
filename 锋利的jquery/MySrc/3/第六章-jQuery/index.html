@@ -13,8 +13,17 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+	<input type="button"  id="send" value="Ajax获取"/>
+	<div class="comment">已有评论:</div>
+	<div id="resText"></div>
 </body>
 <script>
-	
+	$(function(){
+		//加载页面
+		$("#send").click(function(){
+			
+			$("#resText").load("test.html");
+		});
+	});
 </script>
 </html>
