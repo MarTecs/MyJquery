@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-18
+    	描述：鼠标点击事件
+    -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		.content {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="panel">
+		<h5 class="head">什么是jQuery</h5>
+		<div class="content">
+			jQuery是继Prototype之后又一个优秀的Javascript库
+		</div>
+	</div>
+</body>
+<script>
+	/*
+	$(function(){
+		$("#panel h5.head").click(function(){
+			$(this).next("div.content").show();
+		});
+	});
+	*/
+	
+	//如果内容显示，则隐藏，如果内容显示，则隐藏
+	$(function(){
+		$("#panel h5.head").click(function(){
+			if($(".content").is(":visible")){
+				//如果内容显示
+				$(".content").hide();
+			}else{
+				$(".content").show();
+			}
+		});
+	});
+</script>
+</html>
