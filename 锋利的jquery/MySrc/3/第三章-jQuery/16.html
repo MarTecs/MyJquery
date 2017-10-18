@@ -19,10 +19,19 @@
 	<script type="text/javascript">
 		$(function(){
 			//采用val()方法
-			
-			
-			
 			//对地址框进行操作
+			
+			
+			$("#password").val("设置一个初始值");
+			
+			$("#password").defaultValue;
+			alert($("#password").html());
+			
+			
+			
+			/*
+			
+			
 			$("#address").focus(function(){
 				var txt_value = $(this).val();
 				if(txt_value == "请输入邮箱地址") {
@@ -53,7 +62,7 @@
 					$("#password").val("请输入邮箱密码");
 				}
 			});
-			
+			*/
 		});
 	</script>
 </html>
