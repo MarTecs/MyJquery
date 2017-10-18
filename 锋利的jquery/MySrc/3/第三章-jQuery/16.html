@@ -12,12 +12,13 @@
 	</head>
 	<body>
 		<input type="text" id="address" value="请输入邮箱地址" />
-		<input type="text" value="请输入邮箱密码" />
+		<input type="text" value="1" id="password"/>
 		<input type="button" value="登录" />
 	</body>
 	<script type="text/javascript">
 		$(function(){
 			//采用val()方法
+			
 			
 			
 			//对地址框进行操作
@@ -40,7 +41,7 @@
 			
 			$("#password").focus(function(){
 				var txt_value = $("#password").val();
-				if(txt_value == "请输入邮箱密码") {
+				if(txt_value == "1") {
 					$("#password").val("");
 				}
 			});
