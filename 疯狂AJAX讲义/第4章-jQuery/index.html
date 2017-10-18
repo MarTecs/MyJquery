@@ -36,7 +36,7 @@
 	
 	//如果内容显示，则隐藏，如果内容显示，则隐藏
 	$(function(){
-		$("#panel h5.head").click(function(){
+		$("#panel h5.head").bind("click",function(){
 			if($(".content").is(":visible")){
 				//如果内容显示
 				$(".content").hide();
@@ -45,5 +45,8 @@
 			}
 		});
 	});
+	
+	
+	
 </script>
 </html>

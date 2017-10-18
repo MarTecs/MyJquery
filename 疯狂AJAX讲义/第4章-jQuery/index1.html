@@ -6,11 +6,58 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Document</title>
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		.content {
+			display: none;
+		}
+	</style>
 </head>
 <body>
-	
+	<div id="panel">
+		<h5 class="head">什么是jQuery</h5>
+		<div class="content">
+			jQuery是继Prototype之后又一个优秀的Javascript库
+		</div>
+	</div>
 </body>
 <script type="text/javascript">
+	/*
+	$(function(){
+		//第一个是事件的类型，第二个是可选参数，传递给事件对象的额外数据对象，第三个是功能函数
+		//$(".head").bind(type , data, function);
+		
+		$(".head").bind("mouseover",function(){
+			$(this).next("div.content").show();
+		});
+		
+		$(".head").bind("mouseout", function(){
+			$(this).next().hide();
+		});
+	});
+	*/
 	
+	//简写绑定事件
+	/*
+	$(function(){
+		$(".head").mouseover(function(){
+			$(this).next(".content").show();
+		});
+		
+		$(".head").mouseout(function(){
+			$(this).next().hide();
+		});
+	});
+	
+	*/
+	
+	//将两个事件合并成hover事件,模拟光标悬停事件
+	//当光标移上的时候将会触发第一个事件，反之将会触发第二个事件
+	$(function(){
+		$(".head").hover(function(){
+			$(this).next().show();
+		},function(){
+			$(this).next().hide();
+		})
+	});
 </script>
 </html>
