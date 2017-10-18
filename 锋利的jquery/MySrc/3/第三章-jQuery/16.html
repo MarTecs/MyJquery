@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-18
+    	描述：采用val()方法获取代码的值
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<input type="text" id="address" value="请输入邮箱地址" />
+		<input type="text" value="请输入邮箱密码" />
+		<input type="button" value="登录" />
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//采用val()方法
+			
+			$("#address").focus(function(){
+				var txt_value = $(this).val();
+				if(txt_value == "请输入邮箱地址") {
+					$(this).val("");
+				}
+			});
+			
+			$("#address").blur(function(){
+				
+				var txt_value = $(this).val();
+				if(txt_value == "") {
+					$(this).val("请输入邮箱地址");
+				}
+				
+			});
+			
+		});
+	</script>
+</html>

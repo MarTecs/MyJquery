@@ -5,6 +5,8 @@
     	作者：sivan.tech@sivan0222.cn
     	时间：2017-10-17
     	描述：使用jQuery代码获取值
+    	注意事项：JavaScript中的innerText属性不可以在火狐浏览器下运行，而jQuery的text()支持所有浏览器
+    	
     -->
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +15,27 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<input type="text" />
+	<p title="选择你最喜欢的水果：">你最喜欢的水果是？</p>
+	<ul>
+		<li title="苹果">苹果</li>
+		<li title="橘子">橘子</li>
+		<li title="菠萝">菠萝</li>
+	</ul>
 </body>
 <script>
 	$(function(){
+		//html()方法获取代码值
+		//alert($("p").html());
+		//$("p").html("设置代码值");
+		//alert($("p").html());
+		
+		//text()方法获取代码之
+		//alert($("p").text());
+		//设置代码值
+		//$("p").text("设置代码的值");
+		//alert($("p").text());
+		
+		
 		
 	});
 </script>
