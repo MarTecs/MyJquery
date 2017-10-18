@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<!--
+    	作者：sivan.tech@sivan0222.cn
+    	时间：2017-10-18
+    	描述：$.get()方法 介绍
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<form id="form1" action="#">
+			<input type="text" placeholder="查找用户信息"  />
+		</form>
+		<button id="submit">提交</button>
+	</body>
+	<script>
+		$(function(){
+			$("#submit").click(function(){
+				//回调函数只有两个参数：
+				//data：返回的内容
+				//textStatus：请求的状态，success,error,notmodified,timeout
+				//注意：回调函数只有在数据成功返回(success)后才可以调用，与load()不一样
+				$.get("user.do", { method: find }, function(data, textStatus) {
+					
+				},"");
+			})
+		});
+	</script>
+</html>
