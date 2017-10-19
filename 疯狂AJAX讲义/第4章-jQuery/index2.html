@@ -49,6 +49,13 @@
 			 * 
 			 * */
 			
+			$("#panel h5.head").toggle(function(){
+				$(this).next("div.content").show();
+			},function(){
+				$(this).next("div.content").hide();
+			});
+			
+			
 		});
 	</script>	
 </html>
