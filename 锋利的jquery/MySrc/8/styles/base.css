@@ -34,4 +34,5 @@ h1,h2,h3,h4,h5,h6 {
 
 html {
 	/*在Firefox浏览器下始终显示滚动条*/
+	overflow: -moz-scrollbars-vertical;	
 }
