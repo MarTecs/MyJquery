@@ -1,0 +1,16 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+body {
+	background: #FFF;
+	color: #333;
+	font: 12px/1.6em helvetica, arial, sans-serif;
+}
+
+a {
+	color: #0287CA;
+}
