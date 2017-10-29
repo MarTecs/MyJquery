@@ -18,6 +18,10 @@
 		.odd {
 			background-color: #FFFFEE;
 		}
+		
+		.selected {
+			background-color: aqua;
+		}
 	</style>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -68,6 +72,8 @@
 	$(function(){
 		$("tbody > tr:odd").addClass("odd");
 		$("tbody > tr:even").addClass("even");
+		
+		$("tr:contains('王五')").addClass("selected");
 	})
 </script>
 </html>
