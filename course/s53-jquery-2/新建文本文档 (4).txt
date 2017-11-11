@@ -1,0 +1,55 @@
+1.三大选择器
+   $("#id")
+   $(".class")
+   $("div,span")
+   $("input[type=text]")
+
+2.表单 
+   $(":text")
+   $(":radio")
+   $(":checkbox")
+   $(":button")
+   ...
+
+3.筛选
+   $("input:first")
+   $("input:last")
+   $("input").eq(n)
+   $("input:odd")
+   $("input:even")
+   $(":checkbox:checked")
+   $(":selected")//选中的下拉列表框
+
+4. 层级
+  找父亲 .parent()
+  找儿子 父>子
+         父.children("子");
+  找孙子
+         父 子孙
+	 父.find(子孙)
+	 .next();
+	 .prev();
+----------------------------------------------------
+ 个数:   .length
+ 显示    .show()
+ 隐藏    .hide()
+ 显示隐藏切换  .toggle();
+ 样式          .css(key,value);
+               .addClass("class")
+	       .removeClass("class")
+	       .toggleClass("");
+文本框的值 .val()
+层的内容   .html()
+           .text()
+父加子     父.append(子)
+子加父     子.appendTo(父)
+删除       自己.remove()
+
+$.trim(字符串) 去首尾空格
+对象.each( function(){});//循环
+---------------------------------------------------
+事件
+   1.事件冒泡
+     父容器加了加了某个事件，子元素也会有此事件.
+     阻止：return false;
+   2.
