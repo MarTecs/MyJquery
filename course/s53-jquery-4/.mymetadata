@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="s53-jquery-4"
+  id="myeclipse.1508566156717"
+  context-root="/s53-jquery-4"
+  j2ee-spec="5.0"
+  archive="s53-jquery-4.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
